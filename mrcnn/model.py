@@ -2061,6 +2061,9 @@ class MaskRCNN():
             from mrcnn.parallel_model import ParallelModel
             model = ParallelModel(model, config.GPU_COUNT)
 
+        # print summary
+        model.summary()
+        
         return model
 
     def find_last(self):
